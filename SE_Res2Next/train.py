@@ -1,6 +1,6 @@
 from model import *
 
-model=ResNet(Bottleneck,[3,2,2,2],10,groups=32,width_per_group=4)
+model=SE_Res2Net(Bottleneck,[3,2,2,2],10,groups=32,width_per_group=4)
 model.cuda()
 optimizer=torch.optim.Adam(model.parameters(),lr=0.003)
 lossfunc=nn.CrossEntropyLoss().cuda()
