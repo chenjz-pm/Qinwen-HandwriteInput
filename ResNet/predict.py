@@ -10,7 +10,7 @@ transform = torchvision.transforms.Compose([torchvision.transforms.ToTensor(),
                                 torchvision.transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
 testset = torchvision.datasets.CIFAR10(root='./data',train = False,
                                         download=True, transform=transform)
-testloader = torch.utils.data.DataLoader(testset,batch_size = 9,shuffle = True)
+testloader = torch.utils.data.DataLoader(testset,batch_size = 10,shuffle = True)
 
 tr=0
 for step, (data, targets) in enumerate(testloader):
